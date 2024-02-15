@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXERCISES</title>
+    <style>
+      .initial {
+        background-color: #d5b789;
+        color: #ff9f0a;
+      }
+      .active {
+        background-color: #ff9f0a;
+        color: #ffff;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="container"></main>
+    <script>
+      // Paragraph
+      const container = document.querySelector("#container");
+      const paragraph = document.createElement("p");
+      paragraph.textContent = `Hey, I'm red!`;
+      container.appendChild(paragraph);
+      paragraph.style.cssText = "color: red";
+
+      // Heading 3
+      const heading_3 = document.createElement("h3");
+      heading_3.textContent = `Hey, I'm blue!`;
+      heading_3.style.cssText = "color: blue";
+      container.appendChild(heading_3);
+
+      // Div with Heading-1 and Paragraph
+      const div = document.createElement("div");
+      div.style.cssText =
+        "background-color: pink; color: blue; border: 1px solid black";
+      container.appendChild(div);
+
+      const h1 = document.createElement("h3");
+      h1.textContent = `Hey, I'm in a div!`;
+      h1.style.cssText = "color: blue";
+      div.appendChild(h1);
+
+      paragraph.textContent = `ME TOO!`;
+      div.appendChild(paragraph);
+
+      // BUTTON
+      const button = document.createElement("button");
+      button.textContent = "Hello";
+      button.style.cssText =
+        "margin-top: 10px; padding: 1em 2em; border-style: none";
+      container.appendChild(button);
+      button.classList.add("initial");
+      button.classList.add("active");
+      button.classList.toggle("active");
+      // function create_element(nodeParent, name, textContent, ...style) {
+      //   let name = document.createElement(`${name}`);
+
+      //   name.textContent = `${textContent}`;
+      //   name.style.cssText = `${textContent}`;
+      //   nodeParent.appendChild(name);
+      // }
+
+      // create_element(div, p, "ME TOO!", "color: red");
+    </script>
+  </body>
+</html>

@@ -6,7 +6,7 @@ body {
   display: block;
   margin: 8px;
 }
-#calculator {
+.calculator {
   display: flex;
   min-height: 95vh;
   justify-content: center;
@@ -17,7 +17,7 @@ body {
   background-color: #878474;
 }
 
-#container {
+.container {
   background-color: #000000;
   border: 10px solid #2f2f2f;
   border-radius: 4px;
@@ -27,7 +27,7 @@ body {
   gap: 2px;
 }
 
-#display {
+.display {
   grid-column: 1 / -1;
   background-color: #000000;
   display: flex;
@@ -38,6 +38,7 @@ body {
   font-size: 5.5em;
   font-weight: initial;
   text-shadow: 1.3px 1.3px #ffffff;
+  color: #ffffff;
   margin: 5px;
 }
 
@@ -60,6 +61,11 @@ button {
   background-color: #a5a5a5;
   color: #0a0a0a;
 }
+.sign:active,
+.clear:active,
+.percent:active {
+  background-color: #d2cfcf;
+}
 .percent {
   background-color: #a5a5a5;
   color: #0a0a0a;
@@ -67,14 +73,21 @@ button {
 .operator {
   background-color: #ff9f0a;
 }
+.operator:active,
+.equals:active {
+  background-color: #ffcb7b;
+}
 
 .operand {
   background-color: #333333;
 }
+.operand:active,
+.decimal:active {
+  background-color: #757373;
+}
 
 #zero {
   grid-column: span 2;
-  /* border-radius: 15%; */
 }
 .decimal {
   background-color: #333333;
